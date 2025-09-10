@@ -11,7 +11,6 @@ void assignment1() {
     *pointer1 = 12;
 
     printf("New number after modification using pointer %d\n", num1);
-
 }
 
 void assignment2() {
@@ -61,16 +60,37 @@ void assignment3() {
 
     printf("Number 1 after swap: %d\n", num3);
     printf("Number 2 after swap: %d\n", num4);
-
-    printf("\n");
 }
 
 void assignment4() {
-    
+
+    int num5;
+    int *pointer3 = &num5;
+    int **pointer4 = &pointer3;
+    **pointer4 = 69;
+
+    printf("Value Using Pointer: %d\n", *pointer3);
+    printf("Value Using Pointer to the Pointer: %d\n", **pointer4);
 }
 
 void assignment5() {
 
+    char arr3[] = "Hripsime Hakobyan";
+    char *pointer5 = arr3;
+
+    while (*pointer5 != '\0') {
+        printf("%c", *pointer5);
+        pointer5++;
+    }
+    printf("\n");
+
+    pointer5 = arr3;
+    int count = 0;
+    while (*pointer5 != '\0') { // Reset pointer
+        count++;
+        pointer5++;
+    }
+    printf("Length Of String: %d\n", count);
 }
 
 int main() {
@@ -87,12 +107,8 @@ int main() {
     printf("Assignment 4 \n");
     assignment4();
 
-
-
-
-
-
-
+    printf("Assignment 5 \n");
+    assignment5();
 
     return 0;
 
