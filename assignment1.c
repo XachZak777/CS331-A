@@ -40,14 +40,33 @@ void assignment2() {
     for (int i = 0; i < 5; i++) {
         printf("%d ", arr2[i]);
     }
+    printf("\n");
+}
+
+void swap(int *val1, int *val2) {
+    int temp = *val1;
+    *val1 = *val2;
+    *val2 = temp;
 }
 
 void assignment3() {
 
+    int num3 = 21; 
+    int num4 = 31;
+
+    printf("Number 1 before swap: %d\n", num3);
+    printf("Number 2 before swap: %d\n", num4);
+
+    swap(&num3, &num4);
+
+    printf("Number 1 after swap: %d\n", num3);
+    printf("Number 2 after swap: %d\n", num4);
+
+    printf("\n");
 }
 
 void assignment4() {
-
+    
 }
 
 void assignment5() {
@@ -61,6 +80,15 @@ int main() {
 
     printf("Assignment 2 \n");
     assignment2();
+
+    printf("Assignment 3 \n");
+    assignment3();
+
+    printf("Assignment 4 \n");
+    assignment4();
+
+
+
 
 
 
